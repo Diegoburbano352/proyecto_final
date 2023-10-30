@@ -7,7 +7,7 @@ module.exports = app => {
     router.post("/",aut.ensureAuth, Product.create);
   
     // Consultar todos los productos
-    router.get("/", aut.ensureAuth,Product.findAll);
+    router.get("/", Product.findAll);
   
     // Consultar un solo producto por su id
     router.get("/:id", Product.findOne);
